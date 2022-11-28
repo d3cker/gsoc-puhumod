@@ -16,6 +16,6 @@ This mod requires Xiegu GSOC firmware update image v1.3. G90 firmware should not
 
 | Feature  | Description | Link |
 |:--------:|:------------|-----:|
-| USB boot | Method for using USB sticks instead of SD card | [DONE](usb_stick/)|
+| USB boot | Method for using USB sticks instead of SD card | [DONE](usb_boot/)|
 | Debian   | Debian 11 for GSOC Xiegu | WIP|
 

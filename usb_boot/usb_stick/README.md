@@ -34,6 +34,7 @@ is much user friendly than `fdisk`. If everything went well one should have USB
 stick with two partitions: 
 - /dev/sdXXX1 with `uImgae`, `boot.scr`, `xiegu-a20-gsoc.dtb` 
 - /dev/sdXXX2 which should be empty
+
 Now overwrite `boot.scr` with file generated in step **no.2**
 
 Note: Change XXX to a letter assigned by the operaing system. If unsure 

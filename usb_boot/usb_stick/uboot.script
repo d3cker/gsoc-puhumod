@@ -1,0 +1,6 @@
+setenv bootargs root=/dev/sda2 rootwait panic=10 drm_kms_helper.drm_fbdev_overalloc=300
+echo Booting from usb
+sleep 1
+load usb 0:1 0x43000000 ${fdtfile}
+load usb 0:1 0x42000000 uImage
+bootm 0x42000000 - 0x43000000

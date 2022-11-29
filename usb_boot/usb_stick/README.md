@@ -5,12 +5,12 @@ to use /dev/sda2 (from USB) as root folder for operating system. During my
 research it turned out that using USB pendrive was much easier to operate than
 SD card. SD card lifespan and resilience to writes migh also be a turning point.
 
-## 1 Prepare SD card uBoot scrip.
+## 1. Prepare SD card uBoot scrip.
 
 Please refer to [this section](../sdcard_for_usb) for details.
 
 
-## 2 Prepare and Compile USB uBoot script
+## 2. Prepare and Compile USB uBoot script
 
 ```
 mkimage -A arm -O linux -T script -C none -a 0 -e 0 -d uboot.script boot.scr
@@ -19,7 +19,7 @@ mkimage -A arm -O linux -T script -C none -a 0 -e 0 -d uboot.script boot.scr
 As a result boot.scr should be created.
 
 
-## 3 Prepare USB pendrive
+## 3. Prepare USB pendrive
 
 ### 3.a. Write and modify base image
 
@@ -35,7 +35,13 @@ stick with two partitions:
 - /dev/sdXXX1 with `uImgae`, `boot.scr`, `xiegu-a20-gsoc.dtb` 
 - /dev/sdXXX2 which should be empty
 
-Now overwrite `boot.scr` with file generated in step **no.2**
+Depending on a tool used for creating second partition, filesystem creation 
+might be required. If unsure please run:
+```
+mkfs.ext4 /dev/sdXXX2
+```
+
+Now overwrite `boot.scr` from first partition with file generated in step **no.2**
 
 Note: Change XXX to a letter assigned by the operaing system. If unsure 
 type `dmesg` and find out in kernel messages. 
@@ -45,5 +51,8 @@ type `dmesg` and find out in kernel messages.
 
 Unpack your Debian distro archive to the empty partition on your USB stick
 ... and that's it. Pendrive should be ready to use.
+
+For Debian creation please refer to [this](../../debian) section.
+
 
 Note: Both SD card and USB stick must be present during boot.

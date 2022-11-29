@@ -1,4 +1,4 @@
-# USB boot for Xiegu GSOC
+# SD card boot for Xiegu GSOC
 
 The purpose of this document is to preapare SD card for new Debian system.
 
@@ -51,7 +51,7 @@ type `dmesg` and find out in kernel messages.
 
 ## 4. Write Debian to SD card
 
-Copy your Debian distro files to the empty partition on your USB stick
+Copy your Debian distro files to the empty partition on your SD card 
 ... and that's it. Pendrive should be ready to use.
 
 For Debian creation please refer to [this](../debian) section.

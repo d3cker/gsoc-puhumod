@@ -5,10 +5,10 @@ automated.
 
 ## 1. Prerequisites
 * Linux host (no suprise here. I used Ubuntu 22.04)
-* debootstrap and quemu-user-static
+* debootstrap and qemu-user-static
 * ~2GB of free space
 
-If debootstap and quemu-user-static are missing, please install them first:
+If debootstap and qemu-user-static are missing, please install them first:
 
 ```
 sudo apt-get install debootstrap qemu-user-static

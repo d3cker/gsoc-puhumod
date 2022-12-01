@@ -11,7 +11,7 @@ automated.
 If debootstap and qemu-user-static are missing, please install them first:
 
 ```
-sudo apt-get install debootstrap qemu-user-static
+sudo apt-get install debootstrap qemu-user-static binfmt-support
 ```
 
 ## 2. Build

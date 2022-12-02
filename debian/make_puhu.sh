@@ -24,6 +24,11 @@ if [ ! -f /usr/sbin/debootstrap ]; then
     exit
 fi
 
+if [ ! -f /usr/sbin/update-binfmts ]; then
+    echo "Missing binfmt-support.  Please install."
+    exit
+fi
+
 debootstrap --no-check-gpg --arch=armhf --include=ssh --foreign bullseye ${DESTPATH} ftp://ftp.ca.debian.org/debian
 
 cp /usr/bin/qemu-arm-static ${DESTPATH}/usr/bin

@@ -70,8 +70,8 @@ else
   echo "exec /usr/bin/openbox-session" > ${DESTPATH}/root/.xinitrc
 fi
 
-echo "wpa_supplicant -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf" > ${DESTPATH}/root/wpa.sh
-echo "dhclient wlan0"  > ${DESTPATH}/root/dhc.sh
+echo "wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf" > ${DESTPATH}/root/wpa.sh
+echo "dhclient wlan0"  >> ${DESTPATH}/root/wpa.sh
 
 echo "#!/bin/bash
 echo Mounting local GSOC storage

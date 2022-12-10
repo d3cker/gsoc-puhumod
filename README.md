@@ -1,3 +1,5 @@
+# This branch is for experimenting running and interacting with gsoc-app-v1 as a non-root user.
+
 # gsoc-puhumod
 
 Xiegu GSOC Debian hack a.k.a **puhuMod**. puhu originated from "**путін хуй**".

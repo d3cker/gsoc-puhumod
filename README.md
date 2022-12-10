@@ -1,4 +1,4 @@
-# This branch is for experimenting running and interacting with gsoc-app-v1 as a non-root user.
+# This branch is for experimenting with gsoc-app-v1 as a non-root user.
 
 # gsoc-puhumod
 
